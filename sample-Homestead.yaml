@@ -1,0 +1,21 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+authorize: /Users/calpo/.ssh/id_rsa.pub
+
+keys:
+    - /Users/calpo/.ssh/id_rsa
+
+folders:
+    - map: /Users/calpo/projects/php/trial-laravel
+      to: /home/vagrant/Code
+
+sites:
+    - map: homestead.app
+      to: /home/vagrant/Code/public
+
+variables:
+    - key: APP_ENV
+      value: local
